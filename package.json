@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^3.8.1",
     "@trpc/client": "^9.16.0",
     "@trpc/next": "^9.16.0",
     "@trpc/react": "^9.16.0",
