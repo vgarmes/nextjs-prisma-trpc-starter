@@ -1,4 +1,4 @@
-const MAX_DEX_ID = 493;
+import { MAX_DEX_ID } from '@/constants';
 
 export const getRandomPokemon: (notThisOne?: number) => number = (
   notThisOne
