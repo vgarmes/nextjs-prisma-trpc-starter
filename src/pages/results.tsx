@@ -5,9 +5,10 @@ import { PokemonQueryResult } from '@/utils/getPokemonInOrder';
 import Head from 'next/head';
 
 interface Props {
-  pokemons: PokemonQueryResult;
+  pokemon: PokemonQueryResult;
 }
-const ResultsPage: React.FC<Props> = ({ pokemons }) => {
+const ResultsPage: React.FC<Props> = ({ pokemon }) => {
+  console.log(pokemon);
   return (
     <div className="flex flex-col items-center">
       <Head>
@@ -15,7 +16,7 @@ const ResultsPage: React.FC<Props> = ({ pokemons }) => {
       </Head>
       <h2 className="text-2xl p-4">Results</h2>
       <div className="flex flex-col w-full max-w-2xl border">
-        {pokemons
+        {pokemon
           ?.sort((a, b) => {
             const difference =
               generateCountPercent(b) - generateCountPercent(a);
